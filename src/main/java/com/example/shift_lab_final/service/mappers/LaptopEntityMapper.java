@@ -5,13 +5,14 @@ import com.example.shift_lab_final.service.entities.LaptopEntity;
 
 public class LaptopEntityMapper {
 
-    public static LaptopEntity mapDto(LaptopDto dto) {
+    public static LaptopEntity mapDto(LaptopDto dto, int count) {
         return new LaptopEntity(
             dto.getId(),
             dto.getSerialNumber(),
             dto.getMaker(),
             dto.getPrice(),
-            dto.getLaptopType().toString()
+            dto.getLaptopType().toString(),
+            count
         );
     }
 
@@ -21,7 +22,8 @@ public class LaptopEntityMapper {
             entity.getSerialNumber(),
             entity.getMaker(),
             entity.getPrice(),
-            entity.getLaptopType()
+            entity.getLaptopType(),
+            entity.getCount()
         );
     }
 

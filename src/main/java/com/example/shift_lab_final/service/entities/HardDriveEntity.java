@@ -35,4 +35,7 @@ public class HardDriveEntity {
     @Column
     private Integer volume;
 
+    @Column
+    private Integer count;
+
 }

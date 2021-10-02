@@ -17,4 +17,6 @@ public class ProductDto {
 
     protected Integer price;
 
+    protected Integer count;
+
 }

@@ -5,13 +5,14 @@ import com.example.shift_lab_final.service.entities.HardDriveEntity;
 
 public class HardDriveEntityMapper {
 
-    public static HardDriveEntity mapDto(HardDriveDto dto) {
+    public static HardDriveEntity mapDto(HardDriveDto dto, int count) {
         return new HardDriveEntity(
             dto.getId(),
             dto.getSerialNumber(),
             dto.getMaker(),
             dto.getPrice(),
-            dto.getVolume()
+            dto.getVolume(),
+            count
         );
     }
 
@@ -21,7 +22,8 @@ public class HardDriveEntityMapper {
             entity.getSerialNumber(),
             entity.getMaker(),
             entity.getPrice(),
-            entity.getVolume()
+            entity.getVolume(),
+            entity.getCount()
         );
     }
 

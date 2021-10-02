@@ -5,13 +5,14 @@ import com.example.shift_lab_final.service.entities.PcEntity;
 
 public class PcEntityMapper {
 
-    public static PcEntity mapDto(PcDto dto) {
+    public static PcEntity mapDto(PcDto dto, int count) {
         return new PcEntity(
             dto.getId(),
             dto.getSerialNumber(),
             dto.getMaker(),
             dto.getPrice(),
-            dto.getFormFactor().toString()
+            dto.getFormFactor().toString(),
+            count
         );
     }
 
@@ -21,7 +22,8 @@ public class PcEntityMapper {
             entity.getSerialNumber(),
             entity.getMaker(),
             entity.getPrice(),
-            entity.getFormFactor()
+            entity.getFormFactor(),
+            entity.getCount()
         );
     }
 

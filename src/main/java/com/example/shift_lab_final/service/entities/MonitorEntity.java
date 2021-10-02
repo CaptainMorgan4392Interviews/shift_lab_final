@@ -35,4 +35,7 @@ public class MonitorEntity {
     @Column
     private Float diagonal;
 
+    @Column
+    private Integer count;
+
 }

@@ -5,13 +5,14 @@ import com.example.shift_lab_final.service.entities.MonitorEntity;
 
 public class MonitorEntityMapper {
 
-    public static MonitorEntity mapDto(MonitorDto dto) {
+    public static MonitorEntity mapDto(MonitorDto dto, int count) {
         return new MonitorEntity(
             dto.getId(),
             dto.getSerialNumber(),
             dto.getMaker(),
             dto.getPrice(),
-            dto.getDiagonal()
+            dto.getDiagonal(),
+            count
         );
     }
 
@@ -21,7 +22,8 @@ public class MonitorEntityMapper {
             entity.getSerialNumber(),
             entity.getMaker(),
             entity.getPrice(),
-            entity.getDiagonal()
+            entity.getDiagonal(),
+            entity.getCount()
         );
     }
 

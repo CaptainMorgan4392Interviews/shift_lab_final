@@ -35,4 +35,7 @@ public class LaptopEntity {
     @Column(name = "laptop_type")
     private String laptopType;
 
+    @Column
+    private Integer count;
+
 }

@@ -35,4 +35,7 @@ public class PcEntity {
     @Column(name = "form_factor")
     private String formFactor;
 
+    @Column
+    private Integer count;
+
 }
