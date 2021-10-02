@@ -24,6 +24,7 @@ public class MonitorService {
 
     @Transactional
     public void update(MonitorDto monitorDto) {
+        monitorRepository.save(MonitorEntityMapper.mapDto(monitorDto));
     }
 
     public List<MonitorDto> getById(int id) {

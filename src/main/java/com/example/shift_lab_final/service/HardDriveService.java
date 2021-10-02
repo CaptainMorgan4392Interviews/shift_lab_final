@@ -24,6 +24,7 @@ public class HardDriveService {
 
     @Transactional
     public void update(HardDriveDto hardDriveDto) {
+        hardDriveRepository.save(HardDriveEntityMapper.mapDto(hardDriveDto));
     }
 
     public List<HardDriveDto> getById(int id) {

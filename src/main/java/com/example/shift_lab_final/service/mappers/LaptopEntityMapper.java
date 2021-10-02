@@ -11,7 +11,7 @@ public class LaptopEntityMapper {
             dto.getSerialNumber(),
             dto.getMaker(),
             dto.getPrice(),
-            dto.getLaptopType()
+            dto.getLaptopType().toString()
         );
     }
 

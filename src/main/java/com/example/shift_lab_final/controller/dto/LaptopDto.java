@@ -11,14 +11,32 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class LaptopDto extends ProductDto {
 
-    private String laptopType;
+    private LaptopType laptopType;
 
     public LaptopDto(Integer id, String serialNumber, String maker, Integer price, String laptopType) {
         this.id = id;
         this.serialNumber = serialNumber;
         this.maker = maker;
         this.price = price;
-        this.laptopType = laptopType;
+        this.laptopType = LaptopType.valueOf(laptopType);
+    }
+
+    public enum LaptopType {
+        THIRTEEN("THIRTEEN"),
+        FOURTEEN("FOURTEEN"),
+        FIFTEEN("FIFTEEN"),
+        SEVENTEEN("SEVENTEEN");
+
+        private final String laptopType;
+
+        LaptopType(String formFactor) {
+            this.laptopType = formFactor;
+        }
+
+        @Override
+        public String toString() {
+            return this.laptopType;
+        }
     }
 
 }

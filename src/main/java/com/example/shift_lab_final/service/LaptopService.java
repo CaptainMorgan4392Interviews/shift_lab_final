@@ -24,6 +24,7 @@ public class LaptopService {
 
     @Transactional
     public void update(LaptopDto laptopDto) {
+        laptopRepository.save(LaptopEntityMapper.mapDto(laptopDto));
     }
 
     public List<LaptopDto> getById(int id) {

@@ -24,6 +24,7 @@ public class PcService {
 
     @Transactional
     public void update(PcDto pcDto) {
+        pcRepository.save(PcEntityMapper.mapDto(pcDto));
     }
 
     public List<PcDto> getById(int id) {

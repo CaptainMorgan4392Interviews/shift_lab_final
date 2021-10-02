@@ -11,7 +11,7 @@ public class PcEntityMapper {
             dto.getSerialNumber(),
             dto.getMaker(),
             dto.getPrice(),
-            dto.getFormFactor()
+            dto.getFormFactor().toString()
         );
     }
 
