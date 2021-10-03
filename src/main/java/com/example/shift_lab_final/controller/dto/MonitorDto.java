@@ -27,8 +27,7 @@ public class MonitorDto extends ProductDto implements Comparable<MonitorDto> {
     @Override
     public int compareTo(MonitorDto o) {
         boolean equals =
-            Objects.equals(this.id, o.id) &&
-                Objects.equals(this.serialNumber, o.serialNumber) &&
+            Objects.equals(this.serialNumber, o.serialNumber) &&
                 Objects.equals(this.maker, o.maker) &&
                 Objects.equals(this.price, o.price) &&
                 Objects.equals(this.diagonal, o.diagonal);

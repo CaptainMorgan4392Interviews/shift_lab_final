@@ -27,8 +27,7 @@ public class LaptopDto extends ProductDto implements Comparable<LaptopDto> {
     @Override
     public int compareTo(LaptopDto o) {
         boolean equals =
-            Objects.equals(this.id, o.id) &&
-                Objects.equals(this.serialNumber, o.serialNumber) &&
+            Objects.equals(this.serialNumber, o.serialNumber) &&
                 Objects.equals(this.maker, o.maker) &&
                 Objects.equals(this.price, o.price) &&
                 Objects.equals(this.laptopType, o.laptopType);
